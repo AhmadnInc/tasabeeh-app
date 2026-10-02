@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اسم تطبيقك - حمل التطبيق الآن مجاناً</title>
+    <title>تطبيق تسابيح - حمل التطبيق الآن مجاناً</title>
+    <!-- Favicon / أيقونة التطبيق -->
+    <link rel="icon" type="image/png" href="icon.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -20,11 +22,9 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <!-- أيقونة التطبيق المصغرة -->
-                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center font-bold text-xl text-white shadow-lg shadow-indigo-500/30">
-                    A
-                </div>
-                <span class="text-xl font-bold text-white">اسم تطبيقك</span>
+                <!-- أيقونة التطبيق -->
+                <img src="icon.png" alt="أيقونة تطبيق تسابيح" class="w-10 h-10 rounded-xl shadow-lg shadow-indigo-500/20 object-cover">
+                <span class="text-xl font-bold text-white">تطبيق تسابيح</span>
             </div>
             <a href="#download" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-5 py-2 rounded-xl transition duration-300 shadow-lg shadow-indigo-600/30 text-sm">
                 تحميل APK
@@ -33,27 +33,74 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 relative overflow-hidden">
+    <section class="pt-32 pb-16 px-4 relative overflow-hidden">
         <div class="max-w-6xl mx-auto text-center relative z-10">
+            <!-- App Icon Large Display -->
+            <div class="mb-6 flex justify-center">
+                <img src="icon.png" alt="شعار تطبيق تسابيح" class="w-24 h-24 md:w-28 md:h-28 rounded-3xl shadow-2xl shadow-indigo-500/30 border border-slate-700/50 hover:scale-105 transition duration-300">
+            </div>
+
             <span class="bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 font-semibold text-sm px-4 py-1.5 rounded-full inline-block mb-6">
-                🚀 الإصدار الأخير متوفر الآن مجاناً
+                🚀 الإصدار الثاني متوفر الآن مجاناً
             </span>
             <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-                العنوان الرئيسي المثالي لتطبيقك <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">حل مبتكر وسهل الاستخدام</span>
+                تطبيق تسابيح الرقمي <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">رفيقك اليومي للذكر والاطمئنان</span>
             </h1>
             <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                اكتب هنا وصفاً مختصراً وجذاباً لتطبيقك، موضحاً الفائدة الرئيسية التي سيحصل عليها المستخدم عند تحميل التطبيق.
+                تطبيق أندرويد متكامل يتيح لك متابعة الأذكار والتسابيح بسهولة مع واجهة مريحة بدون أية إعلانات مزعجة.
             </p>
 
             <!-- Download Button -->
-            <div id="download" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://github.com/drahmadnaser11-source/tasabeeh-app/releases/download/v1.0.0/default.apk"w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-lg px-8 py-4 rounded-2xl transition duration-300 shadow-xl shadow-indigo-600/25 flex items-center justify-center gap-3">
+            <div id="download" class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <a href="https://github.com/drahmadnaser11-source/tasabeeh-app/releases/download/v1.0.0/default.apk" class="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-lg px-8 py-4 rounded-2xl transition duration-300 shadow-xl shadow-indigo-600/25 flex items-center justify-center gap-3">
                     <i class="fa-solid fa-download text-2xl"></i>
                     <span>تحميل مباشر (APK)</span>
                 </a>
             </div>
-            <p class="text-slate-500 text-sm mt-4">الحجم: 15 ميجابايت • يدعم Android 7.0 وما فوق</p>
+            <p class="text-slate-500 text-sm mb-12">الحجم: أقل من 1 ميجابايت • يدعم جميع أجهزة الأندرويد</p>
+
+            <!-- Banner Image -->
+            <div class="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-700/60">
+                <img src="تسابيح_ رفيق الذكر اليومي 1024.png" alt="تسابيح - رفيق الذكر اليومي" class="w-full h-auto object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots Section (صور التطبيق) -->
+    <section class="py-16 bg-slate-800/30 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-3">واجهة التطبيق</h2>
+                <p class="text-slate-400">لقطات شاشة توضح البساطة والسهولة في الاستخدام</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
+                <!-- صورة 1 -->
+                <div class="bg-slate-800 p-2 rounded-2xl border border-slate-700 shadow-xl hover:border-indigo-500/50 transition duration-300">
+                    <img src="1.jpeg" alt="الأذكار والمسبحة" class="rounded-xl w-full h-auto">
+                    <p class="text-xs text-slate-400 text-center mt-2 font-medium">الأذكار والمسبحة</p>
+                </div>
+                <!-- صورة 2 -->
+                <div class="bg-slate-800 p-2 rounded-2xl border border-slate-700 shadow-xl hover:border-indigo-500/50 transition duration-300">
+                    <img src="2.jpeg" alt="المسبحة الرقمية" class="rounded-xl w-full h-auto">
+                    <p class="text-xs text-slate-400 text-center mt-2 font-medium">المسبحة الرقمية</p>
+                </div>
+                <!-- صورة 3 -->
+                <div class="bg-slate-800 p-2 rounded-2xl border border-slate-700 shadow-xl hover:border-indigo-500/50 transition duration-300">
+                    <img src="3.jpeg" alt="منبه قيام الليل" class="rounded-xl w-full h-auto">
+                    <p class="text-xs text-slate-400 text-center mt-2 font-medium">قيام الليل والأسحار</p>
+                </div>
+                <!-- صورة 4 -->
+                <div class="bg-slate-800 p-2 rounded-2xl border border-slate-700 shadow-xl hover:border-indigo-500/50 transition duration-300">
+                    <img src="4.jpeg" alt="المذكر الصوتي الدوري" class="rounded-xl w-full h-auto">
+                    <p class="text-xs text-slate-400 text-center mt-2 font-medium">المذكّر الصوتي</p>
+                </div>
+                <!-- صورة 5 -->
+                <div class="bg-slate-800 p-2 rounded-2xl border border-slate-700 shadow-xl hover:border-indigo-500/50 transition duration-300">
+                    <img src="5.jpeg" alt="أذكاري الخاصة" class="rounded-xl w-full h-auto">
+                    <p class="text-xs text-slate-400 text-center mt-2 font-medium">إضافة أذكار خاصة</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -62,7 +109,7 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-white mb-4">مميزات التطبيق</h2>
-                <p class="text-slate-400">كل ما تحتاجه في مكان واحد لتجربة مستخدم سهلة وسريعة</p>
+                <p class="text-slate-400">كل ما تحتاجه لتجربة مريحة وسريعة</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -71,8 +118,8 @@
                     <div class="w-12 h-12 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center text-2xl mb-6">
                         <i class="fa-solid fa-bolt"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">سرعة فائقة</h3>
-                    <p class="text-slate-400 leading-relaxed">وصف الميزة الأولى لتطبيقك وكيف تساهم في تحسين تجربة المستخدم.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">حجم خفيف جداً</h3>
+                    <p class="text-slate-400 leading-relaxed">يعمل بسرعة عالية وبدون استهلاك لموارد الهاتف أو البطارية.</p>
                 </div>
 
                 <!-- Feature 2 -->
@@ -80,8 +127,8 @@
                     <div class="w-12 h-12 bg-purple-500/10 text-purple-400 rounded-xl flex items-center justify-center text-2xl mb-6">
                         <i class="fa-solid fa-shield-halved"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">آمن وموثوق</h3>
-                    <p class="text-slate-400 leading-relaxed">وصف الميزة الثانية المتعلقة بالأمان أو الخصوصية وضمان حماية البيانات.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">بدون إعلانات</h3>
+                    <p class="text-slate-400 leading-relaxed">تطبيق مجاني بالكامل خالي من الإعلانات الضائعة للحفاظ على تركيزك.</p>
                 </div>
 
                 <!-- Feature 3 -->
@@ -89,15 +136,37 @@
                     <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center text-2xl mb-6">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">واجهة سهلة</h3>
-                    <p class="text-slate-400 leading-relaxed">وصف الميزة الثالثة التي تخص التصميم والتفاعل وتسهيل الوصول للخدمات.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">واجهة مريحة</h3>
+                    <p class="text-slate-400 leading-relaxed">تصميم حديث ومريح للعين يدعم الوضع الداكن لسهولة الاستخدام ليلاً.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Developer Info Section (عن المطور) -->
+    <section class="py-16 px-4">
+        <div class="max-w-3xl mx-auto bg-slate-800/40 border border-slate-700/50 rounded-3xl p-8 text-center shadow-2xl relative overflow-hidden backdrop-blur-sm">
+            <div class="relative w-28 h-28 mx-auto mb-6">
+                <img src="developer.jpg" alt="م/ أحمد عبد الناصر" class="w-28 h-28 rounded-full object-cover border-2 border-indigo-500 shadow-xl shadow-indigo-500/20">
+                <div class="absolute bottom-0 right-0 w-7 h-7 bg-indigo-600 rounded-full flex items-center justify-center text-white text-xs border-2 border-slate-900" title="مطور معتمد">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-1">م/ أحمد عبد الناصر</h3>
+            <p class="text-sm font-semibold text-indigo-400 mb-4">مطور التطبيق</p>
+            <p class="text-slate-400 text-sm max-w-lg mx-auto mb-6 leading-relaxed">
+                يسعدني استقبال ملاحظاتكم واقتراحاتكم لتطوير التطبيق باستمرار وتقديم أفضل تجربة للمستخدمين.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="https://github.com/drahmadnaser11-source" target="_blank" class="bg-slate-700/80 hover:bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-sm transition duration-300 flex items-center gap-2 shadow-lg">
+                    <i class="fa-brands fa-github text-base"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Installation Guide -->
-    <section class="py-20 px-4">
+    <section class="py-16 px-4 border-t border-slate-800">
         <div class="max-w-4xl mx-auto bg-indigo-950/30 border border-indigo-500/20 rounded-3xl p-8 md:p-12">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">طريقة تثبيت التطبيق</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -122,7 +191,7 @@
 
     <!-- Footer -->
     <footer class="py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
-        <p>© 2026 جميع الحقوق محفوظة لـ اسم تطبيقك.</p>
+        <p>© 2026 جميع الحقوق محفوظة لتطبيق تسابيح.</p>
     </footer>
 
 </body>
