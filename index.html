@@ -6,6 +6,7 @@
     <title>تطبيق تسابيح - حمل التطبيق الآن مجاناً</title>
     <!-- Favicon / أيقونة التطبيق -->
     <link rel="icon" type="image/png" href="icon.png">
+    <link rel="manifest" href="manifest.json">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -27,7 +28,7 @@
                 <span class="text-xl font-bold text-white">تطبيق تسابيح</span>
             </div>
             <a href="#download" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-5 py-2 rounded-xl transition duration-300 shadow-lg shadow-indigo-600/30 text-sm">
-                تحميل APK
+                تحميل التطبيق
             </a>
         </div>
     </header>
@@ -51,9 +52,16 @@
                 تطبيق أندرويد متكامل يتيح لك متابعة الأذكار والتسابيح بسهولة مع واجهة مريحة بدون أية إعلانات مزعجة.
             </p>
 
-            <!-- Download Button -->
-            <div id="download" class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                <a href="https://github.com/drahmadnaser11-source/tasabeeh-app/releases/download/v1.0.0/default.apk" class="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-lg px-8 py-4 rounded-2xl transition duration-300 shadow-xl shadow-indigo-600/25 flex items-center justify-center gap-3">
+            <!-- Download & Install Buttons -->
+            <div id="download" class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+                <!-- PWA Direct Install Button (تثبيت مباشر) -->
+                <button id="pwaInstallBtn" class="hidden w-full sm:w-auto bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-lg px-8 py-4 rounded-2xl transition duration-300 shadow-xl shadow-emerald-600/25 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-mobile-screen-button text-2xl"></i>
+                    <span>تثبيت التطبيق فوراً</span>
+                </button>
+
+                <!-- APK Download Button -->
+                <a id="apkDownloadBtn" href="https://github.com/drahmadnaser11-source/tasabeeh-app/releases/download/v1.0.0/default.apk" class="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-lg px-8 py-4 rounded-2xl transition duration-300 shadow-xl shadow-indigo-600/25 flex items-center justify-center gap-3">
                     <i class="fa-solid fa-download text-2xl"></i>
                     <span>تحميل مباشر (APK)</span>
                 </a>
@@ -75,27 +83,22 @@
                 <p class="text-slate-400">لقطات شاشة توضح البساطة والسهولة في الاستخدام</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
-                <!-- صورة 1 -->
                 <div class="bg-slate-800 p-2 rounded-2xl border border-slate-700 shadow-xl hover:border-indigo-500/50 transition duration-300">
                     <img src="1.jpeg" alt="الأذكار والمسبحة" class="rounded-xl w-full h-auto">
                     <p class="text-xs text-slate-400 text-center mt-2 font-medium">الأذكار والمسبحة</p>
                 </div>
-                <!-- صورة 2 -->
                 <div class="bg-slate-800 p-2 rounded-2xl border border-slate-700 shadow-xl hover:border-indigo-500/50 transition duration-300">
                     <img src="2.jpeg" alt="المسبحة الرقمية" class="rounded-xl w-full h-auto">
                     <p class="text-xs text-slate-400 text-center mt-2 font-medium">المسبحة الرقمية</p>
                 </div>
-                <!-- صورة 3 -->
                 <div class="bg-slate-800 p-2 rounded-2xl border border-slate-700 shadow-xl hover:border-indigo-500/50 transition duration-300">
                     <img src="3.jpeg" alt="منبه قيام الليل" class="rounded-xl w-full h-auto">
                     <p class="text-xs text-slate-400 text-center mt-2 font-medium">قيام الليل والأسحار</p>
                 </div>
-                <!-- صورة 4 -->
                 <div class="bg-slate-800 p-2 rounded-2xl border border-slate-700 shadow-xl hover:border-indigo-500/50 transition duration-300">
                     <img src="4.jpeg" alt="المذكر الصوتي الدوري" class="rounded-xl w-full h-auto">
                     <p class="text-xs text-slate-400 text-center mt-2 font-medium">المذكّر الصوتي</p>
                 </div>
-                <!-- صورة 5 -->
                 <div class="bg-slate-800 p-2 rounded-2xl border border-slate-700 shadow-xl hover:border-indigo-500/50 transition duration-300">
                     <img src="5.jpeg" alt="أذكاري الخاصة" class="rounded-xl w-full h-auto">
                     <p class="text-xs text-slate-400 text-center mt-2 font-medium">إضافة أذكار خاصة</p>
@@ -113,7 +116,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
                 <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-indigo-500/50 transition duration-300">
                     <div class="w-12 h-12 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center text-2xl mb-6">
                         <i class="fa-solid fa-bolt"></i>
@@ -122,7 +124,6 @@
                     <p class="text-slate-400 leading-relaxed">يعمل بسرعة عالية وبدون استهلاك لموارد الهاتف أو البطارية.</p>
                 </div>
 
-                <!-- Feature 2 -->
                 <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-indigo-500/50 transition duration-300">
                     <div class="w-12 h-12 bg-purple-500/10 text-purple-400 rounded-xl flex items-center justify-center text-2xl mb-6">
                         <i class="fa-solid fa-shield-halved"></i>
@@ -131,7 +132,6 @@
                     <p class="text-slate-400 leading-relaxed">تطبيق مجاني بالكامل خالي من الإعلانات الضائعة للحفاظ على تركيزك.</p>
                 </div>
 
-                <!-- Feature 3 -->
                 <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-indigo-500/50 transition duration-300">
                     <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center text-2xl mb-6">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -193,6 +193,64 @@
     <footer class="py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
         <p>© 2026 جميع الحقوق محفوظة لتطبيق تسابيح.</p>
     </footer>
+
+    <!-- Modal Notification (نافذة الإرشاد للتحميل السريع) -->
+    <div id="installModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-800 border border-slate-700 rounded-3xl p-6 md:p-8 max-w-md w-full text-center shadow-2xl relative">
+            <div class="w-16 h-16 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 border border-emerald-500/20">
+                <i class="fa-solid fa-circle-down"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">بدأ تحميل التطبيق...</h3>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                بمجرد اكتمال التنزيل، اضغط على زر <strong class="text-emerald-400 font-bold">"فتح / Open"</strong> في شريط المتصفح لتثبيت التطبيق فوراً.
+            </p>
+            <button onclick="closeModal()" class="w-full bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 rounded-xl transition text-sm">
+                حسناً، فهمت
+            </button>
+        </div>
+    </div>
+
+    <!-- PWA & Download Scripts -->
+    <script>
+        let deferredPrompt;
+        const pwaInstallBtn = document.getElementById('pwaInstallBtn');
+        const apkDownloadBtn = document.getElementById('apkDownloadBtn');
+        const installModal = document.getElementById('installModal');
+
+        // PWA Prompt Detection
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            if (pwaInstallBtn) {
+                pwaInstallBtn.classList.remove('hidden');
+            }
+        });
+
+        if (pwaInstallBtn) {
+            pwaInstallBtn.addEventListener('click', async () => {
+                if (!deferredPrompt) return;
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    pwaInstallBtn.classList.add('hidden');
+                }
+                deferredPrompt = null;
+            });
+        }
+
+        // APK Download Guidance Modal Trigger
+        if (apkDownloadBtn) {
+            apkDownloadBtn.addEventListener('click', () => {
+                setTimeout(() => {
+                    installModal.classList.remove('hidden');
+                }, 500);
+            });
+        }
+
+        function closeModal() {
+            installModal.classList.add('hidden');
+        }
+    </script>
 
 </body>
 </html>
